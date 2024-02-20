@@ -48,12 +48,6 @@ class Ion_Experiment(LocalExperiment, EnvExperiment):
         # Factoring in the HW attenuator, what software amplitude acheives the desired power percentage?   
         self.a_tickle = (self.const.a_trap_rf / atten_factor) * (self.tickle_power_percentage / 100)
 
-        # Create and broadcast sweep array
-        f_start = self.tickle_f_center - self.tickle_f_full_span/2
-        f_stop = self.tickle_f_center + self.tickle_f_full_span/2
-        self.f_array = np.arange(f_start, f_stop, self.tickle_f_step)
-        self.set_dataset("f_array", self.f_array, broadcast=True)
-
         # Broadcast which axis is getting swept currently
         self.set_dataset("shift_axis", self.shift_axis, broadcast=True)
 
