@@ -12,7 +12,7 @@ from scipy.optimize import curve_fit
 measure the rabi pi time of the zeeman qubit in different displacement
 implemented using a localExp function
 aim to provide tools for optical addressing
-reference figure: arxiv1510.05618 Integrated optical addressing of an ion qubit Fig3.(d)
+reference figure: arxiv1510.05618 Integrated optical addressing of an ion qubit Fig3.(d) 
 '''
 
 class Ion_Experiment(LocalExperiment, EnvExperiment):
