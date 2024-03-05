@@ -114,6 +114,7 @@ class Ion_Experiment(LocalExperiment, EnvExperiment):
             elif (self.shift_axis == "Z"):
                 self.writeElectrodes(self.const.v_x_shim_factor, self.const.v_y_shim_factor, self.shift_values[s])
             print(self.shift_values[s])
+            self.pause_scheduler()
             self.core.break_realtime()
 
             t0 = now_mu()
